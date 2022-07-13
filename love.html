@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: 'Sirin Stencil', cursive;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-top: 100px;
+        }
+
+        .box {
+            display: block;
+            position: absolute;
+            margin-top: 300px;
+            animation-name: tran;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes tran {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.25);
+            }
+
+            50% {
+                transform: scale(1.45);
+            }
+
+            75% {
+                transform: scale(1.25);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        :root {
+            --heartSize: 100px;
+        }
+
+        .box-hear {
+            width: var(--heartSize);
+            height: var(--heartSize);
+            background-color: #f00;
+            position: relative;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+
+        .box-hear::before {
+            position: absolute;
+            /* vị trí phụ thuộc vào parent position */
+            width: var(--heartSize);
+            height: var(--heartSize);
+            content: '';
+            /* khởi tạo rỗng cho thẻ giả */
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            /* bo tròn 4 góc của div để tạo hình tròn */
+            background-color: #f00;
+            bottom: 0px;
+            left: -50px;
+            /* vì div parent rộng var(--heartSize) nên di chuyển before sang trái 100px để tâm before nằm trên cạnh dọc của div parent */
+        }
+
+        .box-hear::after {
+            position: absolute;
+            width: var(--heartSize);
+            height: var(--heartSize);
+            content: '';
+            /* khởi tạo rỗng cho thẻ giả */
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            /* bo tròn 4 góc của div để tạo hình tròn */
+            background-color: #f00;
+            top: -50px;
+            right: 0;
+        }
+
+        .box-hear p {
+            position: absolute;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            z-index: 5;
+            top: 0;
+            bottom: 0;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+    <link rel="icon" href="https://static.xx.fbcdn.net/images/emoji.php/v9/t15/1.5/32/1f60d.png">
+    <title>Yêu Linh 😘</title>
+</head>
+
+<body>
+    <h1>Yêu Linh nhiều lắm, đợi 5s sau nhắn tin cho sơn nha, nha nha nha 😘 😘 😘</h1>
+    <div class="box">
+        <div class="box-hear">
+            <p>I LOVE YOU</p>
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+        window.location = "https://www.facebook.com/messages/t/100048327580198"
+    }, 5000)
+    </script>
+</body>
+
+</html>
